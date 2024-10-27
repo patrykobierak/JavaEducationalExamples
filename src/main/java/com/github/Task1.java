@@ -7,9 +7,9 @@ import java.util.Scanner;
 //Example: "Good morning Patrick! It's 9:00"
 public class Task1 {
 
-
-    public void printOut(){
-        System.out.println(greeting(inputName()) + actualTime());
+    @Override
+    public String toString() {
+        return greeting(inputName());
     }
 
     private static String inputName() {
@@ -19,7 +19,7 @@ public class Task1 {
     }
 
     private String greeting(String name) {
-        return "Good morning " + name + "!";
+        return "Good morning " + name + "! " + actualTime();
     }
 
     private String actualTime() {
